@@ -1,0 +1,54 @@
+/****************** mobile design ****************************/
+body {
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+/******* main covers the header and the calculator ***********/
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(185, 41%, 84%);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  padding: 11%;
+}
+
+.calculator {
+  background-color: hsl(0, 0%, 100%);
+  padding: 7%;
+  border-radius: 20px 20px 0 0;
+  color: hsl(186, 14%, 43%);
+}
+.bill-amount {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(189, 41%, 97%);
+  padding: 3%;
+  font-size: 1.2rem;
+  color: hsl(184, 14%, 56%)
+}
+
+span:nth-child(2){
+    color: hsl(228, 45%, 44%);
+}
+
+/****************** Footer ***************/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
