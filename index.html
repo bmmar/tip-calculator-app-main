@@ -30,10 +30,50 @@
         Bill
         <div class="bill-amount">
           <span>$</span>
-          <span class="amount">142.35</span>
-          </div>
-        Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-        person Total / person Reset
+          <!-- <span class="amount" contenteditable>142.35</span> -->
+          <input
+            type="number"
+            name="currency-field"
+            id="currency-field"
+            pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+            value=""
+            data-type="currency"
+            placeholder="0.00"
+          />
+        </div>
+        <p>Select Tip %</p>
+        <div class="percentages">
+          <button class="five-pc">5%</button>
+          <button class="ten-pc">10%</button>
+          <button class="fifteen-pc">15%</button>
+          <button class="twenty-five-pc">25%</button>
+          <button class="fifty-pc">50%</button>
+          <button class="custom-pc">Custom</button>
+        </div>
+        <div class="num-people-text">Number of People</div>
+        <div class="num-people-input">
+          <span>
+            <img src="./images/icon-person.svg" alt="PERSON ICON" />
+          </span>
+          <!-- <span class="num-people">5</span> -->
+          <input
+            type="text"
+            class="num-people"
+            name="num-people-field"
+            id="num-people-field"
+            value=""
+            placeholder=0
+          />
+        </div>
+        <div class="per-person-container">
+          <span class="tip-per-person-text">Tip Amount</span>
+          <span class="per-person-text">/ person</span>
+          <span class="tip-per-person-amount">$0.00</span>
+          <span class="total-per-person-text">Total</span>
+          <span class="per-person-text">/ person</span>
+          <span class="total-per-person-amount">$0.00</span>
+          <button class="reset-button">Reset</button>
+        </div>
       </section>
     </main>
     <footer>
@@ -44,5 +84,6 @@
         >. Coded by <a href="#">Brian Marshall</a>.
       </div>
     </footer>
+    <script src="./tip.js"></script>
   </body>
 </html>
