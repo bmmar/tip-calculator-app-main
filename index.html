@@ -27,7 +27,10 @@
         <img src="./images/logo.svg" alt="Logo" />
       </header>
       <section class="calculator">
-        Bill
+        <p class="bill-text">
+          Bill
+          <span class="bill-error-msg">Can't be </span>
+        </p>
         <div class="bill-amount">
           <span>$</span>
           <!-- <span class="amount" contenteditable>142.35</span> -->
@@ -48,9 +51,19 @@
           <button class="fifteen-pc">15%</button>
           <button class="twenty-five-pc">25%</button>
           <button class="fifty-pc">50%</button>
-          <button class="custom-pc">Custom</button>
+          <button class="custom-pc">
+            Custom
+            <input
+              type="number"
+              name="custom-percent"
+              id="custom-percent"
+              placeholder="0"
+            />
+          </button>
         </div>
-        <div class="num-people-text">Number of People</div>
+        <div class="num-people-text">
+          Number of People<span class="people-error-msg">Can't be 0</span>
+        </div>
         <div class="num-people-input">
           <span>
             <img src="./images/icon-person.svg" alt="PERSON ICON" />
@@ -62,7 +75,7 @@
             name="num-people-field"
             id="num-people-field"
             value=""
-            placeholder=0
+            placeholder="0"
           />
         </div>
         <div class="per-person-container">

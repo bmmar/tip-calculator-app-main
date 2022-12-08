@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 /****************** mobile design ****************************/
@@ -38,6 +39,20 @@ header img {
   border-radius: 20px 20px 0 0;
   color: hsl(186, 14%, 43%);
 }
+
+.bill-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+span.bill-error-msg {
+  color: red;
+  display: none;
+}
+
+span.bill-error-msg.active {
+  display: block;
+}
 .bill-amount,
 .num-people-input {
   display: flex;
@@ -48,20 +63,26 @@ header img {
   font-size: 1.4rem;
   color: hsl(184, 14%, 56%);
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
-.bill-amount input#currency-field, input#num-people-field.num-people{
+.bill-amount input#currency-field,
+input#num-people-field.num-people {
   color: hsl(183, 100%, 15%);
   font-family: "Space Mono", monospace;
   text-align: right;
-  border:none;  
+  border: none;
   background-color: hsl(189, 41%, 97%);
   font-size: 1.4rem;
 }
 
 input:focus {
-  border:none;
+  border: none;
   outline: none;
+}
+
+.bill-amount-error {
+  border: red 1px solid;
 }
 
 section.calculator p {
@@ -86,6 +107,27 @@ section.calculator p {
   border: none;
   border-radius: 5px;
   padding: 6% 0;
+  height: 56px;
+}
+
+#custom-percent {
+  font-family: "Space Mono", monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  max-width: 150px;
+  border: none;
+  border-radius: 5px;
+  padding: 9% 0;
+  text-align: center;
+  position: relative;
+  top: -115%;
+  display: none;
+}
+
+#custom-percent.custom-percent-clicked {
+  display: block;
 }
 
 button.percent-clicked {
@@ -96,14 +138,29 @@ button.percent-clicked {
 /*************************** Number of people input area *********************/
 
 .num-people-text {
+  display: flex;
+  justify-content: space-between;
   margin: 10% 0 5%;
 }
+
+.people-error-msg {
+  color: red;
+  display: none;
+}
+
+span.people-error-msg.active {
+  display: block;
+}
+
 .num-people-input img {
   background-color: hsl(189, 41%, 97%);
   display: flex;
   padding: 3%;
 }
 
+.num-people-error {
+  border: red 1px solid;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -112,7 +169,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -121,7 +178,7 @@ input[type=number] {
 .per-person-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat  (5, 20px);
+  grid-template-rows: repeat (5, 20px);
   background-color: hsl(183, 100%, 15%);
   color: hsl(172, 67%, 45%);
   margin: 10% 0;
@@ -143,15 +200,16 @@ input[type=number] {
   max-height: 65%;
 }
 
-
-.tip-per-person-text, .total-per-person-text {
+.tip-per-person-text,
+.total-per-person-text {
   margin: 15% -10% 0 10%;
   padding-bottom: 0;
-  color:white;
+  color: white;
 }
 
-.tip-per-person-amount, .total-per-person-amount {
-  display:flex;
+.tip-per-person-amount,
+.total-per-person-amount {
+  display: flex;
   justify-content: flex-end;
   font-size: 2rem;
   align-items: center;
@@ -169,11 +227,10 @@ input[type=number] {
 }
 
 .per-person-text {
-  font-size: .7rem;
+  font-size: 0.7rem;
   white-space: nowrap;
   margin-left: 10%;
 }
-
 
 /****************** Footer ***************/
 .attribution {
