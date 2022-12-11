@@ -240,3 +240,81 @@ input[type="number"] {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/***************************  Desktop design *************************/
+
+@media (min-width: 700px) {
+  body {
+    max-width: 1440px;
+  }
+
+  main {
+    width: 1440px;
+    height: 1024px;
+  }
+
+  header img {
+    padding: 5%;
+  }
+  .calculator {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin: 0 auto;
+    padding: 3%;
+    border-radius: 20px;
+    height: 50%;
+  }
+
+  .left-hand-elements {
+    width: 46%;
+  }
+
+  .right-hand-elements {
+    width: 49%;
+  }
+
+  section.calculator p {
+    margin-top: 5%;
+  }
+
+  .percentages {
+    margin: 5% auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+
+  .per-person-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat (5, 20px);
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(172, 67%, 45%);
+    margin: 0 0;
+    border-radius: 10px;
+    padding: 5%;
+  }
+
+  .per-person-container button {
+    
+    grid-column: 1 / span 2;
+    margin: 45% 2% 5%;
+    text-transform: uppercase;
+    color: hsl(183, 100%, 15%);
+    padding: 3% 10%;
+    max-height: 65%;
+  }
+  #custom-percent {    
+    max-width: 124px;
+    border: none;
+    border-radius: 5px;
+    padding: 10% 0;
+    text-align: center;
+    position: relative;
+    top: -98%;
+    display: none;
+  }
+}
