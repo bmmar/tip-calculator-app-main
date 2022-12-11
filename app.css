@@ -43,6 +43,7 @@ header img {
 .bill-text {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 span.bill-error-msg {
@@ -76,9 +77,15 @@ input#num-people-field.num-people {
   font-size: 1.4rem;
 }
 
+.bill-amount:hover,
+.num-people-input:hover {
+  border : 1px solid hsl(185, 41%, 84%);
+  box-sizing: border-box;
+}
+
 input:focus {
   border: none;
-  outline: none;
+  outline: none; 
 }
 
 .bill-amount-error {
